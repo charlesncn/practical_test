@@ -26,7 +26,7 @@ class LoginViewModel(private val authRepository: AuthRepository) {
         _passwordState.value = password
     }
 
-    suspend fun onLoginClicked() {
+     fun onLoginClicked() {
         _loadingState.value = true
 
         val loginRequest = LoginRequest(
