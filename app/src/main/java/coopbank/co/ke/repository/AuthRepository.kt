@@ -6,7 +6,7 @@ import coopbank.co.ke.data.api.model.LoginResponse
 
 class AuthRepository(private val apiService: ApiService) {
 
-     suspend fun login(loginRequest: LoginRequest, param: (Any) -> Unit): Result<LoginResponse> {
+    suspend fun login(loginRequest: LoginRequest, param: (Any) -> Unit): Result<LoginResponse> {
         return try {
             val response = apiService.login(loginRequest)
             if (response.isSuccessful) {
